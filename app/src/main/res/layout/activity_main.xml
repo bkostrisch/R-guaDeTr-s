@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/background">
+
+    <ImageView
+        android:id="@+id/watermark"
+        android:layout_width="137dp"
+        android:layout_height="175dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="10px"
+        android:layout_marginBottom="10px"
+        android:adjustViewBounds="true"
+        android:src="@drawable/marcadagualogo" />
+
+    <ImageView
+        android:id="@+id/directitle"
+        android:layout_width="342dp"
+        android:layout_height="67dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="650dp"
+        android:adjustViewBounds="true"
+        android:visibility="visible"
+        android:src="@drawable/diretamentetitle" />
+
+    <ImageView
+        android:id="@+id/inversetitle"
+        android:layout_width="342dp"
+        android:layout_height="67dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="650dp"
+        android:adjustViewBounds="true"
+        android:visibility="invisible"
+        android:src="@drawable/inversamentetitle" />
+
+    <EditText
+        android:id="@+id/number1"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/radiogroup"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="60dp"
+        android:layout_marginRight="252dp"
+        android:backgroundTint="@color/pinkie"
+        android:ems="10"
+        android:inputType="number"
+        android:textColor="@color/pink"
+        android:textSize="80px"
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="299dp" />
+
+    <ImageView
+        android:id="@+id/inverse1"
+        android:layout_width="45dp"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="410dp"
+        android:adjustViewBounds="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/inversesymbol"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/direct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radiogroup"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="130px"
+        android:adjustViewBounds="true"
+        android:src="@drawable/x"
+        android:visibility="visible" />
+
+    <EditText
+        android:id="@+id/number3"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="60dp"
+        android:layout_marginRight="252dp"
+        android:backgroundTint="@color/pinkie"
+        android:layout_below="@id/number1"
+        android:ems="10"
+        android:inputType="number"
+        android:textColor="@color/pink"
+        android:textSize="80px"
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="299dp" />
+
+    <ImageView
+        android:id="@+id/inverse2"
+        android:layout_width="45dp"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="322dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/inversesymbol"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible" />
+
+    <EditText
+        android:id="@+id/number2"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/radiogroup"
+        android:layout_marginRight="60dp"
+        android:backgroundTint="@color/pinkie"
+        android:ems="10"
+        android:inputType="number"
+        android:textColor="@color/pink"
+        android:textSize="80px"
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="299dp" />
+
+    <RadioGroup
+        android:id="@+id/radiogroup"
+        android:layout_width="317dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="180dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/inverseradio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:drawableRight="@drawable/inversamenteradio"
+            android:onClick="onRadioButtonClicked"/>
+
+        <RadioButton
+            android:id="@+id/directradio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="120px"
+            android:drawableRight="@drawable/diretamenteradio"
+            android:checked="true"
+            android:onClick="onRadioButtonClicked"/>
+
+    </RadioGroup>
+
+    <ImageButton
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/number2"
+        android:layout_marginEnd="56dp"
+        android:layout_marginTop="60px"
+        android:layout_marginRight="60dp"
+        android:background="#00FFFFFF"
+        android:text="RESULTADO"
+        app:srcCompat="@drawable/btnpink"/>
+
+    <ImageView
+            android:id="@+id/finalresultbar"
+            android:layout_width="match_parent"
+            android:layout_height="150px"
+            android:src="@drawable/barraresult"
+        android:layout_below="@id/result"/>
+
+    <TextView
+        android:id="@+id/finalresult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/pink"
+        android:textSize="80px"
+        android:layout_marginTop="10px"
+        android:fontFamily="@font/breakfast_sweety"
+        android:textAlignment="center"
+        android:text=""
+        android:layout_below="@id/result"/>
+
+    <ImageButton
+        android:id="@+id/btn_clean"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10px"
+        android:layout_marginBottom="10px"
+        android:background="#00FFFFFF"
+        app:srcCompat="@drawable/btnclean" />
+
+    <ImageButton
+        android:id="@+id/btn_exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@id/btn_clean"
+        android:layout_marginLeft="10px"
+        android:layout_marginBottom="10px"
+        android:background="#00FFFFFF"
+        app:srcCompat="@drawable/btnleave" />
+
+
+
+
+</RelativeLayout>
